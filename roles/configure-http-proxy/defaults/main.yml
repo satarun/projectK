@@ -1,0 +1,5 @@
+---
+docker_http_proxy: "http://10.252.33.180:3131"
+docker_https_proxy: "https://10.252.33.180:3131"
+docker_no_proxy: ""
+
