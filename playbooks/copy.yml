@@ -1,0 +1,12 @@
+---
+- hosts: "{{ target_hosts | default('docker_vms')}}"
+  gather_facts: yes
+  become: yes
+  tasks:
+   - name: example copying file with owner and permissions
+     copy:
+      src: /etc/yum.repos.d/docker-ce.repo
+      dest: /etc/yum.repos.d/
+      owner: root
+      group: root
+      mode: 0755
